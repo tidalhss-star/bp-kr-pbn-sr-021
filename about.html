@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <meta name="description" content="논현 유흥 정보, 가감 없이 알려준다. 업소별 상세 분석부터 실제 후기까지. 논현에서 제대로 즐기려면 이 정보를 먼저 봐라.">
+    <meta name="keywords" content="논현 유흥, 논현 유흥 추천, 논현 술집 정보, 논현 클럽 정보, 논현 유흥주점 정보, 강남 논현 밤문화, 논현 업소 정보">
+    <link rel="canonical" href="https://kr-pbn-sr-021.vercel.app">
+    <title>논현 유흥 추천 - 진짜 정보 | 논현 업소 완전 분석</title>
+    <meta property="og:title" content="논현 유흥 추천 - 거품 뺀 진짜 정보">
+    <meta property="og:description" content="논현 유흥 정보, 쓸데없는 미사여구는 없다. 실제 이용자가 말하는 논현 유흥의 모든 것. 지금 확인하고 100% 만족해라.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kr-pbn-sr-021.vercel.app">
+    <meta property="og:image" content="https://kr-pbn-sr-021.vercel.app/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        body {
+            background-color: #1a1a1a;
+            color: #e0dcd0;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f5e6c8;
+            line-height: 1.1;
+        }
+        h1 {
+            font-size: 3.5rem;
+            border-left: 8px solid #d4a373;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid #d4a373;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #d4a373;
+        }
+        p, li, a, .text {
+            font-size: 1rem;
+            color: #c5c0b0;
+        }
+        a {
+            color: #f4a261;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        a:hover {
+            color: #e76f51;
+            border-bottom-color: #e76f51;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            flex: 1;
+        }
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: #222222;
+            border: 2px solid #3a3a3a;
+            position: relative;
+        }
+        section:first-of-type {
+            margin-top: 2rem;
+        }
+        header {
+            background: #111111;
+            padding: 1rem 0;
+            border-bottom: 4px solid #d4a373;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.8rem;
+            color: #f5e6c8;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        .logo a {
+            color: inherit;
+            border-bottom: none;
+        }
+        .logo a:hover {
+            color: #d4a373;
+        }
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        nav a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+        }
+        nav a:hover {
+            border-bottom-color: #d4a373;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #f5e6c8;
+            transition: 0.3s;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .info-card {
+            background: #2a2a2a;
+            padding: 1.5rem;
+            border: 1px solid #3a3a3a;
+            transition: 0.3s;
+        }
+        .info-card:hover {
+            border-color: #d4a373;
+            transform: translateY(-4px);
+        }
+        .info-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+        }
+        .info-card .tag {
+            display: inline-block;
+            background: #d4a373;
+            color: #111;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-card ul li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #333;
+            font-size: 0.9rem;
+        }
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+        .info-card .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f4a261;
+            margin: 0.5rem 0;
+        }
+        .badge {
+            background: #e76f51;
+            color: #fff;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 0.5rem;
+        }
+        .faq-list {
+            list-style: none;
+        }
+        .faq-list li {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #2a2a2a;
+            border-left: 4px solid #d4a373;
+        }
+        .faq-list li strong {
+            display: block;
+            color: #f5e6c8;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .cta-block {
+            background: #d4a373;
+            color: #111;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .cta-block h2 {
+            border-bottom: none;
+            color: #111;
+        }
+        .cta-block a {
+            display: inline-block;
+            background: #111;
+            color: #f5e6c8;
+            padding: 0.8rem 2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            margin-top: 1rem;
+        }
+        .cta-block a:hover {
+            background: #333;
+        }
+        footer {
+            background: #111;
+            padding: 2rem 0;
+            border-top: 4px solid #d4a373;
+            text-align: center;
+        }
+        footer p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            nav { display: none; }
+            nav.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 1rem; }
+            .hamburger { display: flex; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo"><a href="/">논현 유흥 추천</a></div>
+            <nav id="main-nav">
+                <a href="/">홈</a>
+                <a href="/info">정보</a>
+                <a href="/review">리뷰</a>
+                <a href="/map">지도</a>
+                <a href="tel:010-0000-0000">전화문의</a>
+            </nav>
+            <div class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h1>논현 유흥 추천<br>진짜 정보는 여기</h1>
+            <p class="text" style="font-size:1.2rem; margin-bottom:2rem;">거품 뺀 논현 유흥 정보. 업소별 상세 분석, 실제 비용, 분위기까지. <strong>네가 원하는 건 숫자와 사실이다.</strong></p>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="tag">🔥 핫플레이스</span>
+                    <h3>클럽 M</h3>
+                    <p class="text">논현 대표 클럽. 주말엔 입장 줄이 기본 30분. 힙합/EDM 믹스, VIP석 있음.</p>
+                    <div class="price">입장: 3~5만원 / 테이블: 50만원~</div>
+                    <ul>
+                        <li>📍 논현동 123-4</li>
+                        <li>⏰ 22:00 ~ 새벽 5시</li>
+                        <li>⭐ 평점: 8.5/10 <span class="badge">검증</span></li>
+                        <li>👥 2030 밀집, 외국인 많음</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <span class="tag">💎 가성비 갑</span>
+                    <h3>바 1924</h3>
+                    <p class="text">칵테일 바인데 분위기가 미쳤다. 가격 대비 퀄리티는 논현 탑급. 조용히 술 즐기기 좋음.</p>
+                    <div class="price">1차: 2~4만원 / 2차: 5만원~</div>
+                    <ul>
+                        <li>📍 논현동 56-7</li>
+                        <li>⏰ 19:00 ~ 새벽 2시</li>
+                        <li>⭐ 평점: 9.0/10 <span class="badge">강력추천</span></li>
+                        <li>👥 30~40대, 커플/소그룹</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <span class="tag">🥩 유흥주점</span>
+                    <h3>더 그랜드</h3>
+                    <p class="text">접대/비즈니스용. 룸이 넓고 서비스 좋음. 안주 수준이 식당급. 가격은 확실히 세다.</p>
+                    <div class="price">1인: 20~30만원 (기본)</div>
+                    <ul>
+                        <li>📍 논현동 200-1</li>
+                        <li>⏰ 20:00 ~ 새벽 4시</li>
+                        <li>⭐ 평점: 8.0/10</li>
+                        <li>👥 40대 이상, 단체 접대</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <span class="tag">🎤 노래방</span>
+                    <h3>코인 노래방 24</h3>
+                    <p class="text">2차로 가기 좋다. 코인식이라 부담 없음. 방음 완벽, 최신곡 많음. 음질도 나쁘지 않음.</p>
+                    <div class="price">30분: 3,000원 / 1시간: 5,000원</div>
+                    <ul>
+                        <li>📍 논현동 78-2</li>
+                        <li>⏰ 24시간</li>
+                        <li>⭐ 평점: 8.2/10 <span class="badge">재방문율 높음</span></li>
+                        <li>👥 모든 연령대</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>논현 유흥 비용 가이드</h2>
+            <p class="text" style="margin-bottom:1.5rem;">네가 지출할 금액을 정직하게 공개한다. <strong>거품 없는 가격 정보.</strong></p>
+            <div class="info-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="info-card" style="text-align:center;">
+                    <h3>클럽</h3>
+                    <div class="price">3~10만원</div>
+                    <p class="text">입장료+음료 1~2잔 기준. VIP 테이블은 별도.</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <h3>바/라운지</h3>
+                    <div class="price">5~15만원</div>
+                    <p class="text">칵테일 3~4잔+안주. 분위기 좋은 곳은 더 비쌈.</p>
+                </div>
+                <div class="info-card" style="text-align:center;">
+                    <h3>유흥주점</h3>
+                    <div class="price">20~50만원</div>
+                    <p class="text">1인 기준. 마담/아가씨 서비스 포함 시 추가.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <ul class="faq-list">
+                <li>
+                    <strong>Q: 논현에서 클럽 가려면 뭐 입고 가야함?</strong>
+                    <p>옷차림 자유지만 깔끔하게. 운동복/슬리퍼는 거절당할 수 있음. 셔츠+진 or 원피스 추천.</p>
+                </li>
+                <li>
+                    <strong>Q: 논현 유흥주점 1인당 기본 비용?</strong>
+                    <p>20~30만원이 기본. 추가 서비스, 양주에 따라 50만원 이상 나갈 수 있음. 카드 가능한 곳 많음.</p>
+                </li>
+                <li>
+                    <strong>Q: 주말에 예약 필수?</strong>
+                    <p>클럽은 예약 안 받는 곳 많음. 유흥주점/바는 금~토 필수 예약. 평일은 워크인 가능.</p>
+                </li>
+                <li>
+                    <strong>Q: 논현에서 2차로 가기 좋은 곳?</strong>
+                    <p>코인 노래방, 포차, 24시 주점. 클럽 나와서 근처 골목으로 가면 많음. 택시 잡기 쉬움.</p>
+                </li>
+                <li>
+                    <strong>Q: 논현 유흥 정보 어디서 더 얻음?</strong>
+                    <p>여기 사이트에 다 있다. 그래도 더 보고 싶으면 네이버 블로그 검색, 단 80%는 광고니까 걸러 들어라.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>논현 유흥 꿀팁</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>⏰ 시간대별 추천</h3>
+                    <
+</body>
+</html>

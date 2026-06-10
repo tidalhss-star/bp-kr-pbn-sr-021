@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <meta name="description" content="논현 유흥 추천, 진짜 핫한 곳만 골랐다. 거품 없는 리얼 후기와 단호한 선택. 지금 바로 확인하고 논현에서 제대로 즐겨라.">
+    <meta name="keywords" content="논현 유흥, 논현 유흥 추천, 논현 술집, 논현 클럽, 논현 유흥주점, 강남 논현, 논현 밤문화">
+    <link rel="canonical" href="https://kr-pbn-sr-021.vercel.app">
+    <title>논현 유흥 추천 블로그 - 진짜 정보는 여기</title>
+    <meta property="og:title" content="논현 유흥 추천 - 진짜 끝판왕">
+    <meta property="og:description" content="논현 유흥 추천, 가짜 정보는 걸러라. 리얼 유저 후기와 직설적인 평가. 지금 당장 논현의 핫스팟을 확인하라.">
+    <meta property="og:type" content="website">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Courier New', 'Nanum Gothic', monospace;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: #f5f5f5;
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            line-height: 1.1;
+            border-left: 6px solid #ff3b30;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #ff3b30;
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+
+        p, li, a, .text {
+            font-size: 1rem;
+            color: #cccccc;
+        }
+
+        a {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #ff3b30;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 2px dashed #333;
+        }
+
+        section:first-of-type {
+            padding-top: 1rem;
+        }
+
+        header {
+            background: #0d0d0d;
+            padding: 1.2rem 0;
+            border-bottom: 2px solid #ff3b30;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #f5f5f5;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #ff3b30;
+        }
+
+        /* 네비게이션 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            padding: 0.3rem 0;
+        }
+
+        .nav-links a:hover {
+            color: #ff3b30;
+            border-bottom: 2px solid #ff3b30;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #f5f5f5;
+            border-radius: 2px;
+        }
+
+        .tel-link {
+            display: inline-block;
+            background: #ff3b30;
+            color: #0d0d0d;
+            padding: 0.5rem 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid #ff3b30;
+            transition: 0.2s;
+        }
+
+        .tel-link:hover {
+            background: transparent;
+            color: #ff3b30;
+            border-color: #ff3b30;
+        }
+
+        /* 카드, 블로그 스타일 */
+        .blog-card {
+            background: #222;
+            border: 2px solid #333;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.2s;
+        }
+
+        .blog-card:hover {
+            border-color: #ff3b30;
+        }
+
+        .blog-card h3 {
+            margin-top: 0;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1rem;
+        }
+
+        .blog-content strong {
+            color: #ff6b6b;
+        }
+
+        .highlight-box {
+            background: #2a2a2a;
+            border-left: 5px solid #ff3b30;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: #ff3b30;
+            color: #0d0d0d;
+            padding: 0.8rem 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 2px solid #ff3b30;
+            font-size: 1rem;
+            transition: 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn-cta:hover {
+            background: transparent;
+            color: #ff3b30;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            font-size: 0.8rem;
+            border-top: 2px dashed #333;
+            margin-top: 2rem;
+        }
+
+        /* 반응형 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem 0;
+                gap: 0.8rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .blog-card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">논현<span>X</span></div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="tel:010-1234-5678" class="tel-link">전화문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1>논현 유흥 추천<br>거르지 말고 들어와라</h1>
+                <p class="text" style="font-size: 1.1rem; margin-bottom: 2rem;">
+                    논현에서 진짜 핫한 곳, 가짜 정보에 속지 말고 여기서 제대로 확인해라. 
+                    내가 직접 발로 뛰고 확인한 리얼 후기만 때려박았다.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span>📅 2025.03.21</span>
+                        <span>✍️ 논현정복자</span>
+                        <span>🔥 리얼후기</span>
+                    </div>
+                    <h3>논현 유흥 추천 TOP 3 — 진짜 노는 곳은 따로 있다</h3>
+                    <div class="blog-content">
+                        <p>
+                            논현 유흥, 말만 번지르르한 곳이 태반이다. 네이버 평점 4.5? 개나 줘버려. 
+                            <strong>내가 직접 가보고 느낀 곳만 추린다.</strong> 거품 빼고 정리했으니 끝까지 읽어라.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p>⚠️ 이 글은 협찬 1도 없다. 내 돈 내고 마신 후기다. 광고 같은 정보 원하면 뒤로가기 눌러라.</p>
+                        </div>
+
+                        <h4>1. 논현 ‘더블랙’ — 가성비 끝판왕</h4>
+                        <p>
+                            입구부터 느낌이 다르다. 조명도, 음악도, 사람도. 여기는 <strong>술값이 미쳤다.</strong>
+                            양주 1병에 5만 원대? 논현에서 이런 가격 본 적 있냐? 없을 거다. 
+                            분위기는 하이엔드인데 가격은 동네 호프 수준. 단, 금요일 저녁은 피해라 — 자리 없어서 발만 동동 굴린다.
+                        </p>
+
+                        <h4>2. ‘루프탑 라운지 논현’ — 뷰 맛집, 인스타용 아님</h4>
+                        <p>
+                            루프탑이라고 다 비슷한 거 아니다. 여기는 <strong>강남 조망이 100%</strong> 
+                            건물 사이로 보이는 논현 야경이 예술이다. 칵테일 맛도 수준급. 
+                            근데 가격이 좀 쎄다. 한 잔에 2만 원 중반. <strong>데이트나 접대용으로 딱이다.</strong>
+                            혼자 가기엔 아깝다. 일행 데려가라.
+                        </p>
+
+                        <h4>3. ‘논현주점 1987’ — 전통주 킬러</h4>
+                        <p>
+                            막걸리, 소주, 전통주 좋아한다면 여기다. 분위기가 <strong>1980년대 복고 그 자체</strong>
+                            벽에는 LP판, 테이블은 나무. 술도 다양하고 안주가 진짜 찐이다. 
+                            <strong>김치전, 파전, 닭도리탕 — 안주가 밥이다.</strong> 
+                            가격도 합리적. 단, 흡연자에겐 별로다. 실내 흡연 금지고 발코니에 가야 됨.
+                        </p>
+
+                        <p>
+                            <strong>결론:</strong> 논현 유흥 추천, 내가 보증한다. 위 세 군데는 실패할 확률이 0%에 가깝다. 
+                            나머지는 네가 알아서 판단해라. 난 여기까지다.
+                        </p>
+
+                        <a href="tel:010-1234-5678" class="btn-cta">전화로 더 물어봐라</a>
+                    </div>
+                </article>
+
+                <!-- 추가 블로그 카드 (정보성) -->
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span>📅 2025.03.19</span>
+                        <span>✍️ 논현고수</span>
+                        <span>💡 팁</span>
+                    </div>
+                    <h3>논현 유흥, 돈 아끼는 3가지 방법</h3>
+                    <div class="blog-content">
+                        <p>
+                            논현에서 놀다 보면 지갑이 얇아지는 게 느껴진다. 
+                            하지만 <strong>아는 만큼 덜 쓴다.</strong> 내가 몇 년간 논현에서 삥 뜯기고 배운 꿀팁을 공개한다.
+                        </p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>할인 이벤트 체크</strong> — 각 업소 인스타나 블로그에 선착순 할인 많다. 팔로우해라.</li>
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>워크인 vs 예약</strong> — 주말엔 예약 안 하면 바가지 요금 적용되는 곳 있다. 미리 전화해라.</li>
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>첫잔은 무료</strong> — 논현 일부 업소는 첫 방문 시 웰컴 샷이나 안주 서비스 준다. 당당하게 물어봐라.</li>
+                        </ul>
+                        <div class="highlight-box">
+                            <p>🔥 꿀팁 하나 더: 논현역 3번 출구 근처 골목에 숨은 맛집 많다. 간판 번쩍이는 데 말고 어두운 데 들어가 봐라.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>자주 묻는 질문</h2>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q. 논현 유흥, 초보자가 가기 괜찮은 곳?</h4>
+                    <p><strong>A.</strong> 당연하다. 더블랙이나 루프탑 라운지는 처음 가도 부담 없다. 직원들 친절하고 분위기 좋다.</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q. 1인 방문 가능?</h4>
+                    <p><strong>A.</strong> 가능한 곳도 있고 아닌 곳도 있다. 논현주점 1987은 혼술 가능. 나머진 전화로 확인해라.</p>
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4>Q. 논현 유흥 추천, 가짜 후기 많은데?</h4>
+                    <p><strong>A.</strong> 맞다. 그래서 내가 썼다. 이 글은 협찬 없고 내 경험 100%다. 믿거나 말거나.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 논현X — 진짜 논현 유흥 추천. 거짓말은 하지 않는다.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
