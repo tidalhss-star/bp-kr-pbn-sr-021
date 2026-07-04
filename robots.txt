@@ -7,10 +7,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-User-agent: Yeti
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-Sitemap: https://kr-pbn-sr-021.pages.dev/sitemap.xml
+Sitemap: https://nonhyeon-club-review.hardcoreroom.com/sitemap.xml
