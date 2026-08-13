@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (4/4) · kr-pbn-sr-021</title>
+  <meta name="description" content="kr-pbn-sr-021에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://nonhyeon-club-review.hardcoreroom.com/posts-4.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ }
+ body {
+ background-color: #1a1a1a;
+ color: #e0dcd0;
+ font-family: 'Courier New', Courier, monospace;
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ h1, h2, h3, h4 {
+ font-family: 'Impact', 'Arial Black', sans-serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #f5e6c8;
+ line-height: 1.1;
+ }
+ h1 {
+ font-size: 3.5rem;
+ border-left: 8px solid #d4a373;
+ padding-left: 1rem;
+ margin-bottom: 1.5rem;
+ }
+ h2 {
+ font-size: 2.5rem;
+ border-bottom: 4px solid #d4a373;
+ padding-bottom: 0.5rem;
+ margin-bottom: 2rem;
+ }
+ h3 {
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ color: #d4a373;
+ }
+ p, li, a, .text {
+ font-size: 1rem;
+ color: #c5c0b0;
+ }
+ a {
+ color: #f4a261;
+ text-decoration: none;
+ font-weight: bold;
+ transition: all 0.2s;
+ border-bottom: 2px solid transparent;
+ }
+ a:hover {
+ color: #e76f51;
+ border-bottom-color: #e76f51;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 2rem 1.5rem;
+ flex: 1;
+ }
+ section {
+ margin-bottom: 4rem;
+ padding: 2rem;
+ background: #222222;
+ border: 2px solid #3a3a3a;
+ position: relative;
+ }
+ section:first-of-type {
+ margin-top: 2rem;
+ }
+ header {
+ background: #111111;
+ padding: 1rem 0;
+ border-bottom: 4px solid #d4a373;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .header-inner {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: 'Impact', sans-serif;
+ font-size: 1.8rem;
+ color: #f5e6c8;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ }
+ .logo a {
+ color: inherit;
+ border-bottom: none;
+ }
+ .logo a:hover {
+ color: #d4a373;
+ }
+ nav {
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ }
+ nav a {
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 0.3rem 0;
+ border-bottom: 2px solid transparent;
+ }
+ nav a:hover {
+ border-bottom-color: #d4a373;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #f5e6c8;
+ transition: 0.3s;
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ }
+ .info-card {
+ background: #2a2a2a;
+ padding: 1.5rem;
+ border: 1px solid #3a3a3a;
+ transition: 0.3s;
+ }
+ .info-card:hover {
+ border-color: #d4a373;
+ transform: translateY(-4px);
+ }
+ .info-card h3 {
+ font-size: 1.4rem;
+ margin-bottom: 0.8rem;
+ }
+ .info-card .tag {
+ display: inline-block;
+ background: #d4a373;
+ color: #111;
+ padding: 0.2rem 0.8rem;
+ font-size: 0.75rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin-bottom: 1rem;
+ }
+ .info-card ul {
+ list-style: none;
+ padding: 0;
+ }
+ .info-card ul li {
+ padding: 0.4rem 0;
+ border-bottom: 1px solid #333;
+ font-size: 0.9rem;
+ }
+ .info-card ul li:last-child {
+ border-bottom: none;
+ }
+ .info-card .price {
+ font-size: 1.4rem;
+ font-weight: bold;
+ color: #f4a261;
+ margin: 0.5rem 0;
+ }
+ .badge {
+ background: #e76f51;
+ color: #fff;
+ padding: 0.2rem 0.6rem;
+ font-size: 0.7rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin-left: 0.5rem;
+ }
+ .faq-list {
+ list-style: none;
+ }
+ .faq-list li {
+ margin-bottom: 1.5rem;
+ padding: 1rem;
+ background: #2a2a2a;
+ border-left: 4px solid #d4a373;
+ }
+ .faq-list li strong {
+ display: block;
+ color: #f5e6c8;
+ font-size: 1.1rem;
+ margin-bottom: 0.3rem;
+ }
+ .cta-block {
+ background: #d4a373;
+ color: #111;
+ padding: 2rem;
+ text-align: center;
+ margin-top: 2rem;
+ }
+ .cta-block h2 {
+ border-bottom: none;
+ color: #111;
+ }
+ .cta-block a {
+ display: inline-block;
+ background: #111;
+ color: #f5e6c8;
+ padding: 0.8rem 2rem;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ border: none;
+ margin-top: 1rem;
+ }
+ .cta-block a:hover {
+ background: #333;
+ }
+ footer {
+ background: #111;
+ padding: 2rem 0;
+ border-top: 4px solid #d4a373;
+ text-align: center;
+ }
+ footer p {
+ font-size: 0.8rem;
+ color: #666;
+ }
+ @media (max-width: 768px) {
+ h1 { font-size: 2.2rem; }
+ h2 { font-size: 1.8rem; }
+ .info-grid { grid-template-columns: 1fr; }
+ nav { display: none; }
+ nav.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 1rem; }
+ .hamburger { display: flex; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (4/4) · kr-pbn-sr-021">
+  <meta property="og:description" content="kr-pbn-sr-021에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://nonhyeon-club-review.hardcoreroom.com/posts-4.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <div class="logo"><a href="/">논현 유흥 추천</a></div>
+ <nav id="main-nav">
+ <a href="/">홈</a>
+ <a href="/info">정보</a>
+ <a href="/review">리뷰</a>
+ <a href="/map">지도</a>
+ 
+ </nav>
+ <div class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('active')">
+ 
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 75개 · 4/4 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-ct960p.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">특목고 및 자사고 입시에서 내신 점수는 학생들의 평균 성적을 나타내지만, 이 수치가 각학교별로 다르게 반영되는 것을 알았습니다. 학교마다 자체적인 평가 시스템과 입시 전략이 달라서, 특정 학생의 내</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-xx0pt2.html">유흥 해결 방법 총정리</a>
+        <p class="post-item__summary">함께 보면 좋은 정보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/interview-001-4gjr5r.html">DHA 함량 전쟁의 진실, 논현 유흥보다 더 까다로운 선택 기준</a>
+        <p class="post-item__summary">질문: &quot;2023 년부터 제조기준이 바뀐 프리미엄 분유와 일반 분유의 실제 DHA 수치를 비교해 주시겠어요?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-1.html">논현 유흥 추천 정보</a>
+        <p class="post-item__summary">논현 지역의 유흥 문화를 알아볼 때, 다양한 정보를 종합적으로 비교하는 것이 도움이 됩니다. 실제로 방문하기 전에 여러 가지 요소를 미리 확인하면, 원하시는 분위기를 더 쉽게 파악할 수 있습니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/juice-2.html">논현 유흥 추천을 위한 용어 이해하기</a>
+        <p class="post-item__summary">유흥 용어는 각 업소의 서비스 방식과 분위기를 이해하는 데 필수적인 표현입니다. 논현에서 유흥 추천 정보를 찾아볼 때, 업소 안내문이나 리뷰에 자주 등장하는 낯선 단어들이 있어 당황하는 경우가 많습</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-k8wwec.html">논현 유흥 추천에 관한 흔한 오해, 직접 확인해보니 달랐던 점</a>
+        <p class="post-item__summary">1. 실제 들어가는 옷 개수 차이: 실험을 통해 확인된 것은, 두 가지 설치 방법간에 실제로는 큰 차이는 없었습니다. 대부분의 경우, 옷들이 35cm와 33.8cm 간격 모두 완전히 들어갔습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-lc4nn4.html">논현 유흥 추천에 관한 흔한 오해, 직접 확인해보니 달랐던 점</a>
+        <p class="post-item__summary">강남권 중심지 중 하나인 논현동 주변의 유흥 추천 정보는 온라인에서 쉽게 접할 수 있지만, 정작 정확하지 않거나 과장된 오해가 적지 않게 존재합니다. 많은 분들이 분위기나 이용 방식에 대해 선입견을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-1.html">논현 유흥 추천</a>
+        <p class="post-item__summary">논현 지역은 다양한 유흥업소가 밀집한 대표적인 상권 중 하나로 알려져 있습니다. 이 지역을 찾거나 방문 계획이 있는 경우, 사전에 정보를 수집하는 것이 중요하며, 다양한 업종과 분위기가 공존하는 환</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-2.html">논현 유흥 추천</a>
+        <p class="post-item__summary">논현 지역의 유흥 문화를 접할 때, 각 업소마다 서로 다른 서비스 분류와 용어를 사용하기도 합니다. 이런 표현들은 지역 특유의 문화적 맥락에서 비롯된 것으로, 방문 전 기본적인 지식이 있으면 불편함</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/normal-3.html">논현 유흥 추천 정보</a>
+        <p class="post-item__summary">논현 지역의 유흥 관련 정보를 찾아보시는 분들을 위해, 이 안내 페이지를 준비했습니다. 논현은 다양한 유흥 시설이 밀집된 지역으로 알려져 있으며, 방문 전에 기본 정보를 미리 파악해 두면 현장을 더</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-1aj7h03.html">논현 유흥 추천</a>
+        <p class="post-item__summary">논현동은 서울 강남권에서도 다채로운 야간 문화와 다양한 스타일의 유흥 시설이 밀집해 있는 대표적인 지역입니다. 편리한 교통망과 세련된 상권이 어우러져 있어 많은 직장인과 방문객들이 저녁 시간대 모임</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-lz72z7.html">논현 유흥 추천 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+        <p class="post-item__summary">- 실패 원인: 일반적으로 특정 학교에서만 사용되는 평가 항목에 대해 체크했지만, 그 중요성이 부족하게 느껴졌습니다.- 원인 분석: 다른 영재학교의 면접 평가 항목과 비교하여 차이점을 파악하였습니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-002-1k7uely.html">논현 유흥 추천</a>
+        <p class="post-item__summary">논현동 일대는 뛰어난 접근성과 고급스러운 분위기로 잘 알려진 지역입니다. 위치 특성상 다채로운 취향과 목적을 가진 이들이 자주 찾는 곳으로, 최신 트렌드를 반영한 정교한 시스템과 세심한 서비스 케어</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-001-1k7uely.html">논현 유흥 추천 관련 추천 정보</a>
+        <p class="post-item__summary">&quot;LG 트롬 세탁기의 에러코드 dE2가 배수 필터 문제인 것으로 알려져 있지만, 실제는 도어락 센서 오염 때문이었네요.&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/t3link-002-nvqmee.html">Created Title</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 밤문화를 즐길 수 있는 대표적인 지역으로 손꼽힙니다. 편리한 교통망과 다양한 콘셉트의 업소들이 조화를 이루어, 퇴근 후 가벼운 술자리부터 특별한 모임까지 다채로운 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+      <span class="pager__current">4</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

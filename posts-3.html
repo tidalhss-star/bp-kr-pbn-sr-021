@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (3/4) · kr-pbn-sr-021</title>
+  <meta name="description" content="kr-pbn-sr-021에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://nonhyeon-club-review.hardcoreroom.com/posts-3.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ scroll-behavior: smooth;
+ font-size: 16px;
+ }
+ body {
+ background-color: #1a1a1a;
+ color: #e0dcd0;
+ font-family: 'Courier New', Courier, monospace;
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ }
+ h1, h2, h3, h4 {
+ font-family: 'Impact', 'Arial Black', sans-serif;
+ font-weight: 900;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: #f5e6c8;
+ line-height: 1.1;
+ }
+ h1 {
+ font-size: 3.5rem;
+ border-left: 8px solid #d4a373;
+ padding-left: 1rem;
+ margin-bottom: 1.5rem;
+ }
+ h2 {
+ font-size: 2.5rem;
+ border-bottom: 4px solid #d4a373;
+ padding-bottom: 0.5rem;
+ margin-bottom: 2rem;
+ }
+ h3 {
+ font-size: 1.8rem;
+ margin-bottom: 1rem;
+ color: #d4a373;
+ }
+ p, li, a, .text {
+ font-size: 1rem;
+ color: #c5c0b0;
+ }
+ a {
+ color: #f4a261;
+ text-decoration: none;
+ font-weight: bold;
+ transition: all 0.2s;
+ border-bottom: 2px solid transparent;
+ }
+ a:hover {
+ color: #e76f51;
+ border-bottom-color: #e76f51;
+ }
+ .container {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 2rem 1.5rem;
+ flex: 1;
+ }
+ section {
+ margin-bottom: 4rem;
+ padding: 2rem;
+ background: #222222;
+ border: 2px solid #3a3a3a;
+ position: relative;
+ }
+ section:first-of-type {
+ margin-top: 2rem;
+ }
+ header {
+ background: #111111;
+ padding: 1rem 0;
+ border-bottom: 4px solid #d4a373;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ .header-inner {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 1.5rem;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-family: 'Impact', sans-serif;
+ font-size: 1.8rem;
+ color: #f5e6c8;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ }
+ .logo a {
+ color: inherit;
+ border-bottom: none;
+ }
+ .logo a:hover {
+ color: #d4a373;
+ }
+ nav {
+ display: flex;
+ gap: 2rem;
+ align-items: center;
+ }
+ nav a {
+ font-size: 0.9rem;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 0.3rem 0;
+ border-bottom: 2px solid transparent;
+ }
+ nav a:hover {
+ border-bottom-color: #d4a373;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ gap: 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #f5e6c8;
+ transition: 0.3s;
+ }
+ .info-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 2rem;
+ }
+ .info-card {
+ background: #2a2a2a;
+ padding: 1.5rem;
+ border: 1px solid #3a3a3a;
+ transition: 0.3s;
+ }
+ .info-card:hover {
+ border-color: #d4a373;
+ transform: translateY(-4px);
+ }
+ .info-card h3 {
+ font-size: 1.4rem;
+ margin-bottom: 0.8rem;
+ }
+ .info-card .tag {
+ display: inline-block;
+ background: #d4a373;
+ color: #111;
+ padding: 0.2rem 0.8rem;
+ font-size: 0.75rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin-bottom: 1rem;
+ }
+ .info-card ul {
+ list-style: none;
+ padding: 0;
+ }
+ .info-card ul li {
+ padding: 0.4rem 0;
+ border-bottom: 1px solid #333;
+ font-size: 0.9rem;
+ }
+ .info-card ul li:last-child {
+ border-bottom: none;
+ }
+ .info-card .price {
+ font-size: 1.4rem;
+ font-weight: bold;
+ color: #f4a261;
+ margin: 0.5rem 0;
+ }
+ .badge {
+ background: #e76f51;
+ color: #fff;
+ padding: 0.2rem 0.6rem;
+ font-size: 0.7rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin-left: 0.5rem;
+ }
+ .faq-list {
+ list-style: none;
+ }
+ .faq-list li {
+ margin-bottom: 1.5rem;
+ padding: 1rem;
+ background: #2a2a2a;
+ border-left: 4px solid #d4a373;
+ }
+ .faq-list li strong {
+ display: block;
+ color: #f5e6c8;
+ font-size: 1.1rem;
+ margin-bottom: 0.3rem;
+ }
+ .cta-block {
+ background: #d4a373;
+ color: #111;
+ padding: 2rem;
+ text-align: center;
+ margin-top: 2rem;
+ }
+ .cta-block h2 {
+ border-bottom: none;
+ color: #111;
+ }
+ .cta-block a {
+ display: inline-block;
+ background: #111;
+ color: #f5e6c8;
+ padding: 0.8rem 2rem;
+ font-size: 1.2rem;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ border: none;
+ margin-top: 1rem;
+ }
+ .cta-block a:hover {
+ background: #333;
+ }
+ footer {
+ background: #111;
+ padding: 2rem 0;
+ border-top: 4px solid #d4a373;
+ text-align: center;
+ }
+ footer p {
+ font-size: 0.8rem;
+ color: #666;
+ }
+ @media (max-width: 768px) {
+ h1 { font-size: 2.2rem; }
+ h2 { font-size: 1.8rem; }
+ .info-grid { grid-template-columns: 1fr; }
+ nav { display: none; }
+ nav.active { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 1rem; }
+ .hamburger { display: flex; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (3/4) · kr-pbn-sr-021">
+  <meta property="og:description" content="kr-pbn-sr-021에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://nonhyeon-club-review.hardcoreroom.com/posts-3.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="header-inner">
+ <div class="logo"><a href="/">논현 유흥 추천</a></div>
+ <nav id="main-nav">
+ <a href="/">홈</a>
+ <a href="/info">정보</a>
+ <a href="/review">리뷰</a>
+ <a href="/map">지도</a>
+ 
+ </nav>
+ <div class="hamburger" onclick="document.getElementById('main-nav').classList.toggle('active')">
+ 
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 75개 · 3/4 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0481.html">논현 유흥 이용 시 유의할 점과 사전 체크 사항</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 밤문화 및 유흥 시설이 밀집한 지역입니다. 논현 유흥 추천 정보를 확인하려는 이용자는 목적과 인원, 분위기에 맞춰 적절한 장소를 선택하고자 합니다. 주말이나 저녁 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0482.html">논현 유흥 추천 정보 안내 및 관련 용어 정리</a>
+        <p class="post-item__summary">서울특별시 강남구 논현동 일대는 번화한 상권과 편리한 교통 망을 바탕으로 다양한 야간 여가 시설이 집약된 대표적인 지역입니다. 논현역과 신논현역을 잇는 골목 곳곳에는 다양한 형태의 주점과 유흥 업소</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0483.html">논현 유흥 관련 정보 및 업종별 특징 안내</a>
+        <p class="post-item__summary">논현동 일대는 대중교통 접근성이 우수하여 야간 시간대에 다양한 방문객이 찾는 주요 상권입니다. 이 지역에는 여러 형태의 주류 판매 시설과 편의 공간이 밀집해 있어 업종마다 분위기와 서비스 제공 방식</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0484.html">논현 지역 유흥 공간 이용과 합리적인 선택 안내</a>
+        <p class="post-item__summary">강남의 대표적인 번화가인 논현동 일대는 다양한 야간 편의시설과 유흥 공간이 밀집해 있어 꾸준히 방문객이 이어지는 곳입니다. 논현 유흥 추천 관련 정보를 살펴볼 때는 각 업소의 분위기와 운영 체계, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0485.html">논현 지역 야간 문화와 유흥 상권 이용 안내</a>
+        <p class="post-item__summary">논현 지역은 뛰어난 교통 편의성을 바탕으로 야간 여가 문화를 즐기려는 이들의 방문이 이어지는 곳입니다. 이 지역의 유흥 상권은 취향에 따라 선택지가 나뉘는 특성을 지니고 있어 사전에 전체적인 흐름을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0486.html">논현 유흥 공간 선택과 주요 고려사항 안내</a>
+        <p class="post-item__summary">논현동 일대는 서울의 대표적인 상권 중 하나로 다양한 형태의 유흥 시설과 모임 공간이 밀집한 지역입니다. 신논현역과 논현역 주변을 중심으로 다채로운 분위기의 매장들이 운영되고 있으며, 퇴근 후 모임</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0487.html">논현 지역 유흥 문화와 이용 정보 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 야간 모임 장소와 유락 시설이 밀집되어 있는 주요 상권 중 하나입니다. 이 지역을 찾는 이용객들은 목적과 인원수, 선호하는 분위기에 맞춰 적합한 공간을 선택하는 경</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0488.html">논현 지역 유흥 문화 및 정보 탐색 시 고려사항 안내</a>
+        <p class="post-item__summary">서울특별시 강남구 논현동 일대는 편리한 교통 여건과 다양한 상업 시설이 조성되어 있어 야간 시간대 이동 인구가 많은 대표적인 지역입니다. 이 구역은 퇴근 후 모임이나 저녁 식사 후 여가를 즐기려는 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0489.html">논현 유흥 추천 관련 정보 및 이용 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 번화한 야간 상권과 다채로운 엔터테인먼트 공간이 밀집해 있어 밤 시간을 즐기려는 방문객들의 발길이 꾸준히 이어지는 지역입니다. 논현 지역의 유흥 시설을 방문하고자 할 때에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0490.html">논현 지역 유흥 업종 선택 가이드</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 접근성이 뛰어나며 다양한 모임 장소가 밀집된 대표적인 상권 지역 중 하나입니다. 이곳에는 다양한 형태의 유흥 업종이 공존하고 있으므로 방문 목적이나 동행자의 성격에 맞춰 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0491.html">논현 유흥 추천 정보와 안전 이용 가이드</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 주점과 모임 공간이 밀집해 있어 저녁 유흥 장소를 찾는 이들의 방문이 많은 지역입니다. 논현 유흥 추천 정보를 알아볼 때에는 인지도 외에도 방문 목적과 인원수, 주</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0492.html">논현 유흥 추천 정보와 상권 특징 안내</a>
+        <p class="post-item__summary">서울특별시 강남구 논현동 일대는 교통 인프라와 상업 시설이 발달하여 밤 시간대 유흥 상권이 형성되어 있습니다. 논현동 유흥 상권을 탐색할 때에는 구역별 업종 분포와 특성을 이해하는 것이 도움이 됩니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0493.html">논현 지역 유흥 이용 시 사전 확인 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 상권이 발달하고 다양한 야간 편의 시설이 밀집해 있어 모임이나 관련 정보를 찾는 수요가 많은 구역입니다. 논현 지역 유흥 추천 정보를 찾거나 모임 장소를 검토할 때에는 방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0494.html">논현 유흥 추천 정보와 안전한 이용을 위한 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 활발한 상권과 함께 다양한 밤문화 및 여가 시설이 집중된 지역으로 알려져 있습니다. 많은 이들이 주말이나 퇴근 후 모임을 위해 논현 지역의 시설을 찾고 있으며, 이에 따라</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0495.html">논현 유흥 추천 관련 정보를 안내하는 가이드</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 엔터테인먼트 시설이 밀집해 있어 관련 정보에 대한 관심이 높은 지역입니다. 논현 유흥 추천 정보를 찾을 때는 단순 홍보성 문구보다는 지역적 특성과 기본 수칙을 미리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0496.html">논현 유흥 추천 안내 및 사전 정보 확인 가이드</a>
+        <p class="post-item__summary">서울 강남구 논현동 지역은 교통 접근성이 우수하고 다양한 상업 시설과 모임 공간이 밀집해 있어 야간 시간대 비즈니스 미팅 및 교류의 장소로 자주 언급되는 곳입니다. 논현 유흥 추천 정보를 검색할 때</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0497.html">논현 지역 유흥 상권의 특성과 방문 전 참고 사항 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 편리한 교통 여건과 다양한 상업 시설이 집약되어 있어 야간 이동과 모임 장소 선택이 용이한 지역입니다. 이 일대 상권은 신사역, 논현역 등 주요 지하철 노선과 연결되어 있</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0498.html">논현 지역 유흥 상권의 특성과 방문 전 확인 사항</a>
+        <p class="post-item__summary">서울 강남구 논현동은 편리한 교통망을 바탕으로 발달한 주요 상권 중 하나입니다. 야간 시간대에 유동 인구가 형성되는 논현 지역 유흥 상권을 파악할 때에는 목적에 맞는 분위기와 구역별 특성을 고려해야</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0499.html">논현 유흥 추천 정보 및 이용 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 편리한 교통망과 다양한 상업 시설을 바탕으로 다채로운 야간 모임 공간이 집결해 있는 대표 상권입니다. 퇴근 후 모임부터 주말 연회에 이르기까지 다양한 목적의 방문객이 찾는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260807-0500.html">논현 유흥 추천 정보와 안전한 이용 안내</a>
+        <p class="post-item__summary">서울 강남구 논현동 일대는 다양한 야간 모임과 회식 공간이 밀집해 있어 방문객이 많은 지역입니다. 논현 유흥 추천 정보를 살펴볼 때에는 상권 특성과 매장 종류를 미리 확인하고, 모임의 목적과 인원에</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <span class="pager__current">3</span>
+      <a class="pager__link" href="posts-4.html">4</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
